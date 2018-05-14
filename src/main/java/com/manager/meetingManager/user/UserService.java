@@ -1,7 +1,5 @@
-package com.manager.meetingManager.service;
+package com.manager.meetingManager.user;
 
-import com.manager.meetingManager.domain.User;
-import com.manager.meetingManager.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

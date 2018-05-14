@@ -1,7 +1,7 @@
-package com.manager.meetingManager.repository;
+package com.manager.meetingManager.util;
 
-import com.manager.meetingManager.domain.User;
-import com.manager.meetingManager.service.UserService;
+import com.manager.meetingManager.user.User;
+import com.manager.meetingManager.user.UserService;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;

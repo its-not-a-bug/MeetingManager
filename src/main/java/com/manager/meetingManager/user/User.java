@@ -1,4 +1,4 @@
-package com.manager.meetingManager.domain;
+package com.manager.meetingManager.user;
 
 import lombok.*;
 

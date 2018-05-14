@@ -1,6 +1,5 @@
-package com.manager.meetingManager.repository;
+package com.manager.meetingManager.user;
 
-import com.manager.meetingManager.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
