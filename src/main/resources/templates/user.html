@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.1.0/css/bootstrap.min.css}" />
+
+    <script th:src="@{/webjars/jquery/3.2.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.1.0/js/bootstrap.min.js}"></script>
+
+</head>
+<body>
+
+
+
+<div class="container">
+
+    Last name: <p th:text="${user.firstName}"/><br/>
+    Last name: <p th:text="${user.lastName}"/><br/>
+    Phone Number: <p th:text="${user.phoneNumber}"/><br/>
+    Email: <p th:text="${user.email}"/><br/>
+    login: <p th:text="${user.login}"/><br/>
+    password: <p th:text="${user.password}"/><br/>
+
+    <br/>
+    <a th:href="@{/users}">
+        <button type="button" class="btn btn-info">Back</button>
+    </a>
+</div>
+
+
+</body>
+</html>
