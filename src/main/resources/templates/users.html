@@ -24,7 +24,7 @@
             <th scope="col">Nazwisko</th>
             <th scope="col">Telefon</th>
             <th scope="col">E-mail</th>
-            <th scope="col">Del or info</th>
+            <th scope="col"> </th>
         </tr>
         </thead>
         <tbody>
@@ -34,8 +34,15 @@
             <td th:text="${user.lastName}"></td>
             <td th:text="${user.phoneNumber}"></td>
             <td th:text="${user.email}"></td>
-            <td><a href="#" th:href="@{/users/delete/__${user.id}__}">delete</a>
-                <a href="#" th:href="@{/users/user/__${user.id}__}">info</a>
+            <td>
+                <a href="#" th:href="@{/users/user/__${user.id}__}">
+                    <button type="button" class="btn btn-info btn-sm">Info</button></a>
+
+                <a href="#" th:href="@{/users/edit/__${user.id}__}">
+                    <button type="button" class="btn btn-success btn-sm">Edit</button></a>
+
+                <a href="#" th:href="@{/users/delete/__${user.id}__}">
+                    <button type="button" class="btn btn-danger btn-sm">Delete</button></a><br/>
             </td>
 
         </tr>
