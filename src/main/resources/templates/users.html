@@ -2,21 +2,29 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.1.0/css/bootstrap.min.css}" />
+
+    <script th:src="@{/webjars/jquery/3.2.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.1.0/js/bootstrap.min.js}"></script>
+
 </head>
 <body>
 
-<h4>Użytkownicy</h4>
 
-<div>
-    <table th:cellpadding="10px" th:border="1">
+
+<div class="container">
+
+    <h4>Użytkownicy</h4>
+
+    <table class="table">
         <thead>
         <tr>
-            <th>Id</th>
-            <th>Imię</th>
-            <th>Nazwisko</th>
-            <th>Telefon</th>
-            <th>E-mail</th>
-            <th>DELETE!</th>
+            <th scope="col">Id</th>
+            <th scope="col">Imię</th>
+            <th scope="col">Nazwisko</th>
+            <th scope="col">Telefon</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">DELETE!</th>
         </tr>
         </thead>
         <tbody>
@@ -35,6 +43,10 @@
         </tr>
         </tbody>
     </table>
+    <br/>
+    <a th:href="@{users/add}">
+        <button type="button" class="btn btn-info">Add new user</button>
+    </a>
 </div>
 
 

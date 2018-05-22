@@ -23,21 +23,21 @@ public class User {
     private Long id;
 
     @NotNull
-    @Size(min=2, max=30)
+    @Size(min=2, max=30, message = "Imię musi być dłuższe niż 2 a krótsze niż 30 znaków")
     private String firstName;
 
     @NotNull
-    @Size(min=2, max=50)
+    @Size(min=2, max=50, message = "Nazwisko musi być dłuższe niż 2 a krótsze niż 50 znaków")
     private String lastName;
 
-    @Size(min=9, max=20)
+    @Size(min=9, max=20, message = "Za krótki numer")
     private String phoneNumber;
 
     @Email
-    @Size(min=5, max=50)
+    @Size(min=5, max=50, message = "Nie poprawny adres e-mail")
     private String email;
 
-    @Size(min=5, max=30)
+    @Size(min=5, max=30, message = "Login musi być dłuższy niż 5 a krótsze niż 30 znaków")
     private String login;
 
     @Size(min=5, max=30)
