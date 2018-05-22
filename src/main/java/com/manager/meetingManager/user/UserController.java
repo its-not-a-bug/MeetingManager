@@ -65,4 +65,28 @@ public class UserController {
         model.addAttribute("user",user);
         return "user";
     }
+
+    @GetMapping("/edit/{id}")
+    public String editUser(@PathVariable("id") Long id, Model model) {
+        User user = userService.findUserById(id);
+        model.addAttribute("user",user);
+        return "edituser";
+    }
+
+    @RequestMapping(value = "/edit", method = RequestMethod.POST)
+    public String editUserInDB(@Valid User user, BindingResult bindingResult){
+
+        if (bindingResult.hasErrors()) {
+            System.out.println("Wysąpił błąd walidacji formularza");
+            bindingResult.getAllErrors().forEach(error -> {
+                        System.out.println(error.getObjectName() + " " + error.getDefaultMessage());
+                    }
+            );
+            return "edituser";
+        } else {
+            userService.saveOrUpdate(user);
+            return "redirect:/users";
+        }
+    }
+
 }
