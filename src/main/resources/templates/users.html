@@ -24,7 +24,7 @@
             <th scope="col">Nazwisko</th>
             <th scope="col">Telefon</th>
             <th scope="col">E-mail</th>
-            <th scope="col">DELETE!</th>
+            <th scope="col">Del or info</th>
         </tr>
         </thead>
         <tbody>
@@ -34,7 +34,9 @@
             <td th:text="${user.lastName}"></td>
             <td th:text="${user.phoneNumber}"></td>
             <td th:text="${user.email}"></td>
-            <td><a href="#" th:href="@{/users/delete/__${user.id}__}">delete</a></td>
+            <td><a href="#" th:href="@{/users/delete/__${user.id}__}">delete</a>
+                <a href="#" th:href="@{/users/user/__${user.id}__}">info</a>
+            </td>
 
         </tr>
 
