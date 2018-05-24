@@ -44,7 +44,7 @@ public class UserController {
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public String addToDB(@Valid User user, BindingResult bindingResult, RedirectAttributes redirectAttributes){
+    public String addToDB(@Valid User user, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model){
 
         if (bindingResult.hasErrors()) {
             System.out.println("Wysąpił błąd walidacji formularza");
@@ -52,6 +52,7 @@ public class UserController {
                         System.out.println(error.getObjectName() + " " + error.getDefaultMessage());
                     }
             );
+            model.addAttribute("error", "Wystąpił błąd walidacji danych. Popraw dane w formularzu!");
             return "adduser";
         } else {
             userService.saveOrUpdate(user);
