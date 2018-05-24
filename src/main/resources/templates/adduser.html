@@ -11,6 +11,13 @@
 </head>
 <body>
 <div class="container">
+
+    <span th:if="${error != null}">
+    <div class="alert alert-danger" role="alert">
+        <span th:text="${error}"></span>
+    </div>
+    </span>
+
     <form class="form-horizontal" th:object="${user}" th:action="@{/users/add}" th:method="post">
         <div class="form-group">
             <br/>
