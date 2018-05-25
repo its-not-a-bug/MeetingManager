@@ -1,17 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout">
 <head>
 
-    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.1.0/css/bootstrap.min.css}" />
-
-    <script th:src="@{/webjars/jquery/3.2.1/jquery.min.js}"></script>
-    <script th:src="@{/webjars/bootstrap/4.1.0/js/bootstrap.min.js}"></script>
+<title>Użytkownicy</title>
 
 </head>
 <body>
 
-
-<div class="container">
+<div class="jumbotron" layout:fragment="jumbotron">
 
     <h4>Użytkownicy</h4>
 
@@ -68,7 +64,6 @@
         <button type="button" class="btn btn-info">Add new user</button>
     </a>
 </div>
-
 
 </body>
 </html>

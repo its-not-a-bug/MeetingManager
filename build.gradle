@@ -27,6 +27,10 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+
+
+	compile group: 'nz.net.ultraq.thymeleaf', name: 'thymeleaf-layout-dialect', version: '2.3.0'
+
 	compile('org.springframework.boot:spring-boot-starter-web')
 	// h2 in memory database
 	compile group: 'com.h2database', name: 'h2', version: '1.4.197'
@@ -34,9 +38,18 @@ dependencies {
 
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 
+
 	//JQuery
 	compile group: 'org.webjars', name: 'jquery', version: '3.2.1'
 	//Boostrap
 	compile group: 'org.webjars', name: 'bootstrap', version: '4.1.0'
+	//fullcalendar
+	compile group: 'org.webjars', name: 'fullcalendar', version: '3.8.0'
+	//momentjs
+	compile group: 'org.webjars', name: 'momentjs', version: '2.22.1'
+	// jquery-ui
+	compile group: 'org.webjars', name: 'jquery-ui', version: '1.12.1'
+
+
 
 }
