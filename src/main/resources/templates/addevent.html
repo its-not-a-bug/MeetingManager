@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <title>Add event</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.1.0/css/bootstrap.min.css}" />
+
+    <script th:src="@{/webjars/jquery/3.2.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.1.0/js/bootstrap.min.js}"></script>
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap-datetimepicker.css}"/>
+    <script type="text/javascript" th:src="@{/js/bootstrap-datetimepicker.min.js}"></script>
+
+
+</head>
+<body>
+<div class="jumbotron" layout:fragment="jumbotron">
+
+
+        <div class='col-sm-6'>
+            <input type='text' class="form-control" id='datetimepicker4' />
+        </div>
+
+
+
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker4').datetimepicker({
+                weekStart: 1,
+                todayBtn: 1,
+                autoclose: 1,
+                todayHighlight: 1
+            });
+        });
+    </script>
+
+
+</div>
+
+</body>
+</html>

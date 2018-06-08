@@ -35,10 +35,10 @@ public class InitialDataLoader implements ApplicationListener<ApplicationReadyEv
             return;
         }
         loadData();
-        insertEvent("2018-05-22 11:00", "2018-05-22 15:00", "Jakies spotkanie", "Kraków");
-        insertEvent("2018-05-23 11:00", "2018-05-23 15:00", "Szkolenie", "Warszawa");
-        insertEvent("2018-05-21 11:00", "2018-05-21 15:00", "Kurs", "Wrocław");
-        insertEvent("2018-05-22 08:00", "2018-05-22 11:00", "Sniadanie", "Kraków");
+        insertEvent("2018-06-22 11:00", "2018-06-22 15:00", "Jakies spotkanie", "Kraków");
+        insertEvent("2018-06-23 11:00", "2018-06-23 15:00", "Szkolenie", "Warszawa");
+        insertEvent("2018-06-21 11:00", "2018-06-21 15:00", "Kurs", "Wrocław");
+        insertEvent("2018-06-22 08:00", "2018-06-22 11:00", "Sniadanie", "Kraków");
         alreadySetup = true;
     }
 

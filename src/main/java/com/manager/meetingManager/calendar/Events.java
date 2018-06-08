@@ -1,6 +1,7 @@
 package com.manager.meetingManager.calendar;
 
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -22,9 +23,11 @@ public class Events {
     private String description;
 
     @Column(name="start")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
     private Date start;
 
     @Column(name="end")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
     private Date end;
 
     @Override
